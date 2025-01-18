@@ -38,7 +38,7 @@ def print_gf(f, x):
     count = {i: 0 for i in domain}  
     for y in input_space:
         print(f"y = {y},", end=' ')
-        x_plus_y = tuple((xi + yi) % field for xi, yi in zip(x, y))  # Compute x + y (mod 3)
+        x_plus_y = tuple((xi + yi) % field for xi, yi in zip(x, y)) 
         print(f"x + y = {x_plus_y},", end=' ')
         result = (f[x_plus_y] - f[y]) % field  
         print(f"f{x_plus_y} - f{y} = {result}", end=' ')
